@@ -16,19 +16,15 @@ void Student::setsurname(string newsurname) {
 	surname = newsurname;
 }
 
-void Student::getcourses()
-{
-	for (int i = 0; i < 3; i++)
-	{
-		cout << courses[i] << "\n";
-	}
+string Student::getcourses(int i){
+	return courses[i];
 }
 
 void Student::setcourses() {
 	for (int i = 1; i < 4; i++)
 	{
 		cout << "Enter course " << i << endl;
-		getline(cin >> ws, courses[i]);
+		getline(cin >> ws, courses[i-1]);
 	}
 }
 
@@ -37,10 +33,18 @@ string Student::getaverage() {
 }
 
 void Student::setaverage(string newaverage) {
-	if (newaverage[1] == '+' || newaverage[1] == '-') {
-		average = newaverage[0] + newaverage[1];
+	for (auto& x : newaverage) {
+		x = toupper(x);
 	}
-	else{
-		average = newaverage[0];
+	if (newaverage[0] >= 'A' && newaverage[0] <= 'F') {
+		if (newaverage.length() > 1 && (newaverage[1] == '+' || newaverage[1] == '-')) {
+			average = string(1, newaverage[0]) + newaverage[1]; // Concatenate first character with '+' or '-'
+		}
+		else {
+			average = string(1, newaverage[0]); // Only the first character
+		}
+	}
+	else {
+		average = "Irregular";
 	}
 }

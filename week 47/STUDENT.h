@@ -21,13 +21,14 @@ public:
 	string getsurname();
 	void setsurname(string newsurname);
 	
-	void getcourses();
+	string getcourses(int i);
 	void setcourses();
 	
 	string getaverage();
 	void setaverage(string newaverage);
 
-	void userinput(Student student);
+	void userInput();
+	void presentableOutput();
 };
 
 

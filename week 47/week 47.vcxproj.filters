@@ -29,5 +29,8 @@
     <ClInclude Include="STUDENT.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="STUDENTINTERFACE.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
