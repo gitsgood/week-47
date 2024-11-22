@@ -28,7 +28,7 @@ void Student::presentableOutput() {
 		cout << "Incompatible Name";
 
 	if (getsurname().length() < studentSurname.length()) {
-		cout << getname();
+		cout << getsurname();
 		for (int i = 0; i < studentSurname.length() - getsurname().length(); i++) {
 			cout << " ";
 		}
@@ -39,15 +39,15 @@ void Student::presentableOutput() {
 	string concatenatedCoursesArray = ""; // We reconvert the array into a string for easier usage (very intuitive...)
 
 	for (int i = 0; i < 3; ++i) {  // Classes always amount to 3, no need for array size variable.
-		concatenatedCoursesArray += getcourses(i); 
-		if (i < 3) {
-			concatenatedCoursesArray += ","; 
+		concatenatedCoursesArray += getcourses(i);
+		if (i < 2) {
+			concatenatedCoursesArray += ",";
 		}
 	}
 
 	if (concatenatedCoursesArray.length() < classes.length()) {
 		cout << concatenatedCoursesArray;
-		for (int i = 0; i < classes.length(); i++) {
+		for (int i = 0; i < classes.length() - concatenatedCoursesArray.length(); i++) {
 			cout << " ";
 		}
 	}
