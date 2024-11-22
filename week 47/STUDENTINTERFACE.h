@@ -10,5 +10,6 @@ static string averageGrade = "Average Grade";
 
 //The strings have a set size which we will use to compare and format output accordingly.
 //We only need to modify the header if we need more space.
+//PS: Somehow prefacing it with static makes or breaks the code such as it is.
 
 #endif

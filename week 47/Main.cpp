@@ -6,14 +6,14 @@ void main() {
 
 	Student array[5] = { student1,student2,student3,student4,student5 };
 
-	for (int i = 0; i < 2; i++) {
+	for (int i = 0; i < 5; i++) {
 		cout << "Please enter the details of student " << i + 1 << endl;
 		array[i].userInput();
 		cout << "\n\n";
 	}
 
 	cout << studentName << studentSurname << classes << averageGrade << "\n\n";
-	for (int i = 0; i < 2; i++) {
+	for (int i = 0; i < 5; i++) {
 		array[i].presentableOutput();
 		cout << "\n\n";
 	}
